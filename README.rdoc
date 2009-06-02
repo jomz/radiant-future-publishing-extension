@@ -1,0 +1,22 @@
+= Future publishing
+
+The future publishing extension makes it possible to publish a page at a certain time in the future.
+
+Created by Benny Degezelle for www.belmodo.tv
+
+== Usage
+
+Use the default published_at datetime_select controls to pick the date that you want to publish a page. If you haven't done so allready, you will have to set a config option through the settings extension or console. Namely:
+
+  Radiant::Config['page.edit.published_date?'] = true
+
+== Warning:
+
+In order for this extension to work properly, you will have to set the correct timezone in your environment.rb. Not doing so will probably result in bad Time comparing..
+To do this, put this inside your Radiant::Initializer block: 
+
+  config.time_zone = "Brussels"
+  
+You can run this rake task to find out your timezone:
+
+  rake time:zones:local
