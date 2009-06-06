@@ -6,6 +6,11 @@ FuturePublishing::PageExt = Proc.new do
     status == Status[:published] && published_at <= Time.current
   end
   
+  def update_published_at
+    self[:published_at] = Time.now if (status == Status[:published] and !published_at)
+    true
+  end
+  
   private
   
   def children_find_options(tag)
