@@ -2,6 +2,9 @@
 
 The future publishing extension makes it possible to publish a page at a certain time in the future.
 
+= This extension has been merged into Radiant 0.9 and is thus obsolete
+= keeping this around for people with pre-0.9 Radiant instances
+
 Created by Benny Degezelle for www.belmodo.tv
 
 == Usage
